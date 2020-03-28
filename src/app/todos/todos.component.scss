@@ -1,0 +1,17 @@
+@import '../../styles/global/index';
+
+:host {
+  padding: small(4);
+
+  & > *:not(:last-child) {
+    margin-bottom: small(4);
+  }
+}
+
+header {
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}

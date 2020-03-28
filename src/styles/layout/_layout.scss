@@ -1,0 +1,21 @@
+html,
+body,
+app-root {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  flex: 1;
+}
+
+app-root {
+  flex: 1;
+}
+
+router-outlet {
+  margin: 0 !important;
+}

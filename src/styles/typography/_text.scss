@@ -1,0 +1,23 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font: normal small(4)/1.5 $font-family;
+  color: getColor(grey-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+// Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: getColor(grey-dark);
+  line-height: 1.1;
+  user-select: none;
+}

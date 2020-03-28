@@ -1,0 +1,24 @@
+// Content:
+//   ❯ Normalize
+//   ❯ Global
+//   ❯ Typography
+//   ❯ Layout
+//   ❯ Angular Material
+//
+// Documentation:
+//   ❯ For annotations availability check: http://sassdoc.com/annotations.
+
+// Normalize
+@import 'normalize';
+
+// Global
+@import 'global/index';
+
+// Typography
+@import 'typography/index';
+
+// Layout
+@import 'layout/index';
+
+// Angular Material
+@import 'material/index';

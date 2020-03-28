@@ -1,0 +1,19 @@
+<header>
+  <section>
+    <label id="filter-todos">Filter todos:</label>
+    <mat-radio-group aria-labelledby="filter-todos"
+                     [ngModel]="toDosType"
+                     (change)="getTodos($event.value)">
+      <mat-radio-button value="all">All</mat-radio-button>
+      <mat-radio-button value="done">Done</mat-radio-button>
+      <mat-radio-button value="uncomplete">Uncompleted</mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+  <p>Number of <i>{{ toDosType }}</i>: {{ todos.length | numberOfTodos }}</p>
+</header>
+
+<todos-list *ngIf="todos?.length && !isLoading; else loadingState" [todos]="todos"></todos-list>
+<ng-template #loadingState>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

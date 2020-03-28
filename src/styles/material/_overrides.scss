@@ -1,0 +1,8 @@
+.mat-radio-group {
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:last-child) {
+    margin-bottom: small(2);
+  }
+}

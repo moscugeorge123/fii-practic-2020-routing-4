@@ -1,0 +1,37 @@
+// Usage:
+//   ❯ Use color function to obtain a color.
+//   ❯ e.g.: background-color: getColor(grey);
+
+$colors: (
+  white: #FFF,
+  black: #000,
+
+  // Grey shades
+  grey-lighter: #EEE,
+  grey-light: #CCC,
+  grey: #999,
+  grey-dark: #555,
+  grey-darker: #333,
+
+  // Border
+  border-color: #DDD,
+
+  // Severity colors
+  critical: #FF1744,
+  major: #FF7D00,
+  minor: #FC0,
+  warning: #40C4FF,
+  completed: #00C7B3
+);
+
+/// Access colors.
+///
+/// @param {String} $colorName - The needed color.
+/// @return {Color} color code for the specified `$colorName`.
+@function getColor($colorName) {
+  @if not map-has-key($colors, $colorName) {
+    @error 'Color `#{$colorName}` not available.';
+  }
+
+  @return map-get($colors, $colorName);
+}

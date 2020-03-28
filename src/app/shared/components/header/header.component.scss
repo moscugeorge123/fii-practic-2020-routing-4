@@ -1,0 +1,31 @@
+@import '../../../../styles/global/index';
+
+:host {
+  align-items: center;
+  border-bottom: to-rem(1) solid getColor(border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: small(3) 0 0 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: to-rem(30);
+  display: flex;
+  width: 100%;
+
+  li {
+    flex: 1;
+    padding: small();
+    text-align: center;
+    transition: background 100ms ease-in-out;
+
+    &:hover, .active {
+      background: lightgreen;
+      cursor: pointer;
+    }
+  }
+}
