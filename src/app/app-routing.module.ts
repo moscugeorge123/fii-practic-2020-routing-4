@@ -4,7 +4,7 @@ import { GifComponent } from './gif/components';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'todo',
     loadChildren: () => import('./todos/todos.module').then(m => m.ToDosModule)
   },
   {
