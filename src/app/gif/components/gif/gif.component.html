@@ -1,1 +1,13 @@
-<h1>GIF</h1>
+<menu>
+  <p [class.selected]="currentGif === gifs.cat"
+     (click)="choose('cat')">Cool Cat</p>
+
+  <p [class.selected]="currentGif === gifs.dog"
+     (click)="choose('dog')">Weird Dog</p>
+
+  <p [class.selected]="currentGif === gifs.hamster"
+     (click)="choose('hamster')">Hamster</p>
+</menu>
+<main>
+  <img [src]="currentGif">
+</main>
