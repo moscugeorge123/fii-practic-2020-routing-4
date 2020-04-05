@@ -5,7 +5,7 @@ import { ToDosComponent } from './todos.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':todoType',
     component: ToDosComponent
   },
   {
