@@ -2,11 +2,13 @@
   <section>
     <label id="filter-todos">Filter todos:</label>
     <mat-radio-group aria-labelledby="filter-todos"
-                     [ngModel]="toDosType"
-                     (change)="getTodos($event.value)">
-      <mat-radio-button value="all">All</mat-radio-button>
-      <mat-radio-button value="done">Done</mat-radio-button>
-      <mat-radio-button value="uncomplete">Uncompleted</mat-radio-button>
+                     [ngModel]="toDosType">
+      <mat-radio-button value="all"
+                        routerLink="/todo/all">All</mat-radio-button>
+      <mat-radio-button value="done"
+                        routerLink="/todo/done">Done</mat-radio-button>
+      <mat-radio-button value="uncomplete"
+                        routerLink="/todo/uncomplete">Uncompleted</mat-radio-button>
     </mat-radio-group>
   </section>
 

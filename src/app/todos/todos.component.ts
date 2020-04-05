@@ -31,16 +31,13 @@ export class ToDosComponent implements OnInit, OnDestroy {
     this.subscription.add(
       this.route.params.subscribe((params) => {
         console.log(params.todoType);
+        this.getTodos(params.todoType);
       })
     );
   }
 
   public ngOnDestroy(): void {
     this.subscription.unsubscribe();
-  }
-
-  public getTodoFromRouting(todo: ToDoType = 'all') {
-    this.getTodos(todo);
   }
 
   public getTodos(selectedType: ToDoType = 'all'): void {

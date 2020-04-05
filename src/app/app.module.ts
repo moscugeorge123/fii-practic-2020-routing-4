@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { GifModule } from './gif/gif.module';
+import { CanActivateGuard } from './guards/can-activate.guard';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,9 @@ import { GifModule } from './gif/gif.module';
   ],
   bootstrap: [
     AppComponent
+  ],
+  providers: [
+    CanActivateGuard
   ]
 })
 export class AppModule { }

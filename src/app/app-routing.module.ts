@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GifComponent } from './gif/components';
+import { CanActivateGuard } from './guards/can-activate.guard';
 
 const routes: Routes = [
   {
@@ -9,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'gif',
-    component: GifComponent
+    component: GifComponent,
+    canActivate: [CanActivateGuard]
   },
   {
     path: '**',
